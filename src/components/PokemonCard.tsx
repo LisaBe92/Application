@@ -1,5 +1,11 @@
-export default function PokemonCard({pokemon}) {
+interface PokemonTypes {
+  pokemon: {
+    name: string;
+    imgSrc?: string;
+  };
+}
 
+export default function PokemonCard({ pokemon }: PokemonTypes) {
   return (
     <figure>
       {pokemon.imgSrc && pokemon.name ? (
